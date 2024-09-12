@@ -9,15 +9,15 @@ namespace AssignmentMvc03Demo.BLL.Interfaces
 {
     public interface IDepartmentRepository
     {
-        public IEnumerable<Department> GetAll();
+         IEnumerable<Department> GetAll();
 
-        public Department Get(int id);
+         Department Get(int id);
 
-        public int Add(Department entity);
+         int Add(Department entity);
 
-        public int Update(Department entity);
+         int Update(Department entity);
 
-        public int Delete(Department entity);
+         int Delete(Department entity);
 
 
     }

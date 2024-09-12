@@ -1,3 +1,5 @@
+using AssignmentMvc03Demo.BLL.Interfaces;
+using AssignmentMvc03Demo.BLL.Repositories;
 using AssignmentMvc03Demo.DAL.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,11 +14,13 @@ namespace AssignmentMvc03Demo.PL
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+
             builder.Services.AddDbContext<ApplicationDbContext>(
                 option =>
                 {
                     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-                 
+                    
                 }
                 );
            
