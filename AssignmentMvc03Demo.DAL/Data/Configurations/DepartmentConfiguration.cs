@@ -20,18 +20,18 @@ namespace AssignmentMvc03Demo.DAL.Data.Configurations
 
             builder.Property(D => D.Name).HasColumnType("varchar(50)").IsRequired();
 
-            builder.Property(D => D.CreationDate).HasComputedColumnSql("CAST((GETDATE())as date)");
-
-            builder.Property(D => D.CreatedOn).HasDefaultValue("GETDATE()");
-
-
-            builder.Property(D => D.CreatedBy).HasDefaultValue("");
-
-
-            builder.Property(D => D.LastModifiedOn).HasComputedColumnSql("GETDATE()");
-
-
-            builder.Property(D => D.LastModifiedBy).HasComputedColumnSql("GETDATE()");
+        //  builder.Property(D => D.CreationDate).HasComputedColumnSql("CAST((GETDATE())as date)");
+        // 
+        //  builder.Property(D => D.CreatedOn).HasDefaultValue("GETDATE()");
+        // 
+        // 
+        //  builder.Property(D => D.CreatedBy).HasDefaultValue("");
+        // 
+        // 
+        //  builder.Property(D => D.LastModifiedOn).HasComputedColumnSql("GETDATE()");
+        // 
+        // 
+        //  builder.Property(D => D.LastModifiedBy).HasComputedColumnSql("GETDATE()");
 
 
 
