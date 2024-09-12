@@ -15,7 +15,7 @@ namespace AssignmentMvc03Demo.PL
             builder.Services.AddDbContext<ApplicationDbContext>(
                 option =>
                 {
-                    option.UseSqlServer("Server=.;Database=CompanyMvc;Trusted_Connection=True;Encrypt=false;");
+                    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
                  
                 }
                 );
