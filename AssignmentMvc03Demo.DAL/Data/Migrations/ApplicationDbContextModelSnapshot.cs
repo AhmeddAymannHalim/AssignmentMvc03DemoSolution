@@ -48,7 +48,7 @@ namespace AssignmentMvc03Demo.DAL.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Department");
+                    b.ToTable("Department", (string)null);
                 });
 #pragma warning restore 612, 618
         }

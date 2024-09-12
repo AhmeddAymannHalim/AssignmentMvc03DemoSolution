@@ -20,19 +20,32 @@ namespace AssignmentMvc03Demo.BLL.Repositories
 
         public Department Get(int id)
         {
-          // var department = _dbContext.Departments.Local.Where(D => D.Id == id).FirstOrDefault();
-          //  
-          //  if (department is null)
-          //      department = _dbContext.Departments.Where(D => D.Id == id).FirstOrDefault();
-            
+            // var department = _dbContext.Department.Local.Where(D => D.Id == id).FirstOrDefault();
+            // 
+            // if (department is null)
+            //     department = _dbContext.Department.Where(D => D.Id == id).FirstOrDefault();
+            // 
+            // return department;
 
-            return _dbContext.Find<Department>(id);
+            var department = _dbContext.Department.Find(id);
+
+            if(department is null)
+            {
+                throw new Exception("Department is Not Found");
+            }
+
+
+            return department;
         }
 
         public IEnumerable<Department> GetAll()
         {
+            if (_dbContext.Department is null)
+            {
+                throw new InvalidOperationException("Departments DbSet is not initialized.");
+            }
 
-            return _dbContext.Departments.ToList();
+            return _dbContext.Department.ToList() ;
 
         }
         
