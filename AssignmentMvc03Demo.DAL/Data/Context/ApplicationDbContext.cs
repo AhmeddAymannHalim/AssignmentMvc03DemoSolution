@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AssignmentMvc03Demo.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,10 @@ namespace AssignmentMvc03Demo.DAL.Data.Context
             
         }
 
+        public IEnumerable<Department> Departments { get; set; }
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-                //=> optionsBuilder.UseSqlServer();
+        //=> optionsBuilder.UseSqlServer();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
                 => modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
