@@ -1,4 +1,4 @@
-namespace AssignmentMvc03Demo.PL.Models
+namespace AssignmentMvc03Demo.PL.ViewModels
 {
     public class ErrorViewModel
     {

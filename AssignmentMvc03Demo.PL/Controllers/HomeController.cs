@@ -1,4 +1,4 @@
-using AssignmentMvc03Demo.PL.Models;
+using AssignmentMvc03Demo.PL.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
