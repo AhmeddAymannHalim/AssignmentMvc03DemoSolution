@@ -1,3 +1,6 @@
+using AssignmentMvc03Demo.DAL.Data.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace AssignmentMvc03Demo.PL
 {
     public class Program
@@ -9,6 +12,13 @@ namespace AssignmentMvc03Demo.PL
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<ApplicationDbContext>(
+                option =>
+                {
+                    option.UseSqlServer("Server=.;Database=CompanyMvc;Trusted_Connection=True;Encrypt=false;");
+                 
+                }
+                );
            
 
             var app = builder.Build();
